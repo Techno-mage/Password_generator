@@ -73,8 +73,10 @@ function generatePassword(){
     pWord = pWord.concat(randomSelector(options));
   }
 
-  console.log(i);
-
+  //logged information for debugging
+  console.log("number of itterations: " + i);
+  console.log("Password: " = pWord);
+  console.log("Password length " + pWord.length);
   
 
   return pWord;
