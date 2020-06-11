@@ -75,7 +75,7 @@ function generatePassword(){
 
   //logged information for debugging
   console.log("number of itterations: " + i);
-  console.log("Password: " = pWord);
+  console.log("Password: " + pWord);
   console.log("Password length " + pWord.length);
   
 
