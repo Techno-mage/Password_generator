@@ -41,6 +41,29 @@ function generatePassword(){
   var specchar = "!@#$%&*?.,-_+=";
   var uLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numbers = "0123456789";
+  var options = "";
+  var pWord = "";
+
+  if (nums){
+    options = options.concat(numbers);
+  }
+  if (upper){
+    options = options.concat(uLetters);
+  }
+  if (lower){
+     options = options.concat(letters);
+  }
+  if (spec){
+    options = options.concat(specchar);
+  }
+  console.log(options);
+
+  for (var i = 0; i < chars; i++){
+    pWord = pWord.concat(randomSelector(options));
+
+  }
+
+  return pWord;
 
 
   //insure that passworld has at least one of each selected value.
