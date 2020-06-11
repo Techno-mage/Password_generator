@@ -43,35 +43,41 @@ function generatePassword(){
   var numbers = "0123456789";
   var options = "";
   var pWord = "";
+  var i = 0;
 
+  //insure that passworld has at least one of each selected value.
   if (nums){
     options = options.concat(numbers);
+    pWord = pWord.concat(randomSelector(numbers));
+    i++;
   }
   if (upper){
     options = options.concat(uLetters);
+    pWord = pWord.concat(randomSelector(uLetters));
+    i++;
   }
   if (lower){
      options = options.concat(letters);
+     pWord = pWord.concat(randomSelector(letters));
+    i++;
   }
   if (spec){
     options = options.concat(specchar);
+    pWord = pWord.concat(randomSelector(specchar));
+    i++;
   }
   console.log(options);
 
-  for (var i = 0; i < chars; i++){
+  //fill in the remaining password
+  for (i; i < chars; i++){
     pWord = pWord.concat(randomSelector(options));
-
   }
 
+  console.log(i);
+
+  
+
   return pWord;
-
-
-  //insure that passworld has at least one of each selected value.
-
-
-
-
-
 }
 
 
