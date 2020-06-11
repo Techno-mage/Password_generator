@@ -8,19 +8,7 @@ function generatePassword(){
   
   //VARIABES
 
-  //boolians for each type of character
-  do{
-    var upper = confirm("Do you want to use Upper case?");
-    var lower = confirm("Do you want to use Lower case?");
-    var nums = confirm("Do you want to use numbers?");
-    var spec = confirm("Do you want to use Special characters?");
-
-    if (!upper && !lower && !nums && !spec){
-      alert("please choose at least one option.");
-    }
-
-  } while(!upper && !lower && !nums && !spec)
-  
+  //number of characters
   do{
     var chars = prompt("please enter the number of characters you want, between 8 and 128.");
     
@@ -34,6 +22,21 @@ function generatePassword(){
     }
 
   } while(chars < 8 || chars > 128 || chars == NaN);
+
+  //boolians for each type of character
+  do{
+    var upper = confirm("Do you want to use Upper case?");
+    var lower = confirm("Do you want to use Lower case?");
+    var nums = confirm("Do you want to use numbers?");
+    var spec = confirm("Do you want to use Special characters?");
+
+    if (!upper && !lower && !nums && !spec){
+      alert("please choose at least one option.");
+    }
+
+  } while(!upper && !lower && !nums && !spec)
+  
+  
 
   //Assemble the passworld
   //variable for password generation
